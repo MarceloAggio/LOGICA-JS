@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica JavaScript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            border-radius: 8px;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .col-2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-bottom: 10px;
+        }
+        .col-2 input{
+            width: 95%;
+            height: 30px;
+        }
+        .col-4{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .col-4 input{
+            width: 90%;
+            height: 30px;
+        }
+        hr{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .btn{
+            margin-top: 10px;
+            width: 50%;
+            height: 40px;
+            background-color: darkgreen;
+            color: white;
+            border-radius: 10px;
+            border: none
+        }
+        .disciplina select{
+            width: 95%;
+            height: 35px;
+            border-radius: 8px;
+            border: 1px solid black;
+        }
+        label{
+            margin-bottom: 10px;
+        }
+        .nomee{
+            color: grey;
+        }
+        #aprov{
+            color: green;
+        }
+        #recup{
+            color: yellow;
+        }
+        #reprov{
+            color: red;
+        }
+        #res{
+            text-align: center;
+            background-color: darkslateblue;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Média Aluno</h1>
+        <hr>
+        <form action="" id="form-media">
+        <div class="col-2">
+                <div class="nome">
+                    <label for="Nome">Nome Aluno</label>
+                    <input type="text" id="nome">
+                </div>
+                <div class="disciplina">
+                    <label for="Disciplina">Disciplina</label>
+                    <select name="" id="disciplina">
+                        <option value="Matematica">Matematica</option>
+                        <option value="Portugues">Portugues</option>
+                        <option value="Fisica">Fisica</option>
+                        <option value="Historia">Historia</option>
+                    </select>
+                </div>
+        </div>
+        <div class="col-4">
+            <div>
+                <label for="nota1">BIM 1</label>
+                <input type="number" class="bim">
+            </div>
+            <div>
+                <label for="nota2">BIM 2</label>
+                <input type="number" class="bim">
+            </div>
+            <div>
+                <label for="nota3">BIM 3</ç>
+                <input type="number" class="bim">
+            </div>
+            <div>
+                <label for="nota4">BIM 4</label>
+                <input type="number" class="bim">
+            </div>
+            <button type="submit" class="btn">Calcular Media</button>
+        </div>
+        <h2 id="res"></h2>
+        </form>
+    </div>
+    <script src="script3.js"></script>
+</body>
+</html>
