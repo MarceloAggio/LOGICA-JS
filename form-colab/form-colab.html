@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+    <form action="#" method="POST" id="form-colab">
+        <label for="">Nome Completo:</label>
+        <input type="text" name="nomeCompleto">
+        <label for="">Cargo:</label>
+        <input type="text" name="cargo">
+        <label for="">Salario:</label>
+        <input type="text" name="salario">
+        <br>
+        <br>
+        <button class="btn btn-primary">Enviar</button>
+        <button id="gerar" class="btn btn-primary">Gerar Folha</button>
+        <br>
+        <span id="resp"></span>
+    </form>
+    
+    </div>
+
+    <script src="form-colab.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .btn{
+            width: 20%;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Lista de Compras</h1>
+        <hr>
+    <form action="" id="form-carrinho">
+        <div class="row">
+
+            <div class="col-md-6">
+                <label for="">Produtos</label>
+                <select name="produtos" id="produto-list" class="form-control">
+                    <option value="Arroz">Arroz</option>
+                    <option value="Feijão">Feijão</option>
+                    <option value="Oleo">Oléo</option>
+                    <option value="Macarão">Macarão</option>
+                    <option value="Alho">Alho Kg</option>
+                    <option value="Cebola">Cebola Kg</option>
+                    <option value="Pão">Pão Francês unit.</option>
+                    <option value="Manteiga">Manteiga</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="">Quantidade</label>
+                <input type="number" id="qtds" name="qtds" class="form-control">
+            </div>
+            
+            <button class="btn btn-primary mt-3 mb-1" type="submit">Enviar</button>
+            <button class="btn btn-primary mt-3" id="registrar">Registrar Produto</button>
+        </div>
+        <br>
+        <hr>
+        <span id="resp"></span>
+    </form>
+    <hr>
+    </div>
+
+
+    <script>
+
+        let produtos = []
+        let qtd = document.getElementById('qtds')
+        let btn = document.getElementById('registrar')
+        let formProd = document.getElementById('form-carrinho')
+        let valor = 0
+        let teste = []
+        
+
+        formProd.addEventListener('submit', function(event){
+        event.preventDefault();
+
+        
+        console.log(qtd.value)
+        valor = qtd.value
+        console.log(event.target.qtds.value)
+    
+        produtos.push(formProd.produtos.value)
+        })
+
+        btn.addEventListener('click',function(event){
+
+        event.preventDefault();
+        let mostRel = "";
+        let valorTotal = 0;
+
+
+        for(let i = 0; i < produtos.length; i++){
+            if (produtos[i] == 'Arroz'){
+                valorTotal = 10*valor;
+            }else if (produtos[i] == 'Feijão'){
+                valorTotal = 7.0*valor;
+            }else if (produtos[i] == 'Macarão'){
+                valorTotal = 5.0*valor;
+            }else if (produtos[i] == 'Oleo'){
+                valorTotal = 9.5*valor;
+            }else if (produtos[i] == 'Alho'){
+                valorTotal = 30.0*valor;
+            }else if (produtos[i] == 'Cebola'){
+                valorTotal = 2.0*valor;
+            }else if (produtos[i] == 'Pão'){
+                valorTotal = 0.8*valor;
+            }else if (produtos[i] == 'Manteiga'){
+                valorTotal = 14.0*valor;
+            }
+
+            console.log(mostRel)
+            mostRel += `<h3>Produto:  ${produtos[i]} | Valor Total: R$:${valorTotal}</h3>`    
+        
+            resp.innerHTML = ""
+            resp.innerHTML = mostRel
+
+        }
+    })
+    </script>
+</body>
+</html>

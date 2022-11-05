@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+        .container{
+            width: 90%;
+            margin: 0 auto;
+        }
+        button{
+            margin: 10px;
+        }
+        input{
+            width: 40%;
+        }
+        .one input{
+            width: 80%;
+        }
+    </style>
+
+</head>
+<body>
+    
+    
+    <form action="" id="form-media">
+        <div class="row">
+            <div class="col-6 one">
+                <label for="">Nome Do aluno:</label>
+                <input type="text" name="nomeCompleto">
+            </div>
+            <div class="col-6">
+                <select name="materia" id="">
+                    <option value="Portugues">Portugues</option>
+                    <option value="Matematica">Matematica</option>
+                    <option value="Fisica">Fisica</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label for="">Bim 1</label>
+                <input type="text" name="bime1">
+                <label for="">Bim 2</label>
+                <input type="text" name="bime2">
+            </div>
+            <div class="col-6 mb">
+            <label for="">Bim 3</label>
+            <input type="text" name="bime3">
+            <label for="">Bim 4</label>
+            <input type="text" name="bime4">
+            </div>
+        <br>
+        <button class="btn btn-primary">Enviar</button>
+        <button class="btn btn-primary" id="gerar">Ver media</button>
+        <br>
+        <span id="resp"></span>
+        </div>
+    </form>
+    
+
+    <script src="media.js"></script>
+</body>
+</html>
