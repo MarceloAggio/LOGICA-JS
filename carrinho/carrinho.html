@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho Imagens</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+        .container{
+            margin: 0 auto;
+            width: 80%;
+        }
+        .btn{
+            width: 20%;
+            margin: 0 auto;
+        }
+        input{
+            width: 100%;
+            border-radius: 10px;
+            border: solid black 1px;
+        }
+        #produto{
+            width: 100%;
+            text-align: center;
+        }
+        #produto img{
+            width: 40%
+        }
+    </style>
+
+</head>
+<body>
+    
+    <section>
+    
+    <div class="container">
+    <form action="#" id="form-carrinho" name="form-carrinho">
+        <h1 class="text-center">Carrinho De Compras</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <label for=""></label>
+            <input type="text" name="codigo_produto" placeholder="Codigo" id="codigo-produto">
+        </div>
+
+        <div class="col-md-6">
+            <label for=""></label>
+            <input type="text" name="nomeProduto" placeholder="Nome Produto">
+        </div>
+
+        <div class="col-md-6">
+            <label for=""></label>
+            <input type="number" name="qtdProduto" placeholder="QTD" min="1">
+        </div>
+
+        <div class="col-md-6">
+            <label for=""></label>
+            <input type="text" name="precoProduto" placeholder="Preço">
+        </div>
+        <hr class="mt-4">
+        <button class="btn btn-primary mt-3">Incluir</button>
+    </div>
+    </form>
+    </div>
+
+    <div class="container">
+        <div id="cupom"></div>
+        <div id="produto">
+            <img src="" alt="" id="produto-imagem">
+        </div>
+        <hr>
+        <h2>Lista de Produtos</h2>
+        <div id="total"></div>
+    </div>
+
+    </section>
+
+
+    <script src="carrinho.js"></script>t
+</body>
+</html>
